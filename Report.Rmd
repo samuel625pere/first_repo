@@ -2,7 +2,7 @@
 title: "Report"
 author: "Samuel Pereira"
 date: "26/11/2020"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -13,9 +13,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 In this report I'll make a few points about the data on morders in US territory, I hope this little project of mine can server as a start for your own data analysis and repors.
 
-Using this libraries:
-1. ggplo2
-2. tidyverse
+Using this libraries:  
+1. ggplo2  
+2. tidyverse  
 
 ```{r libraries,message=FALSE,echo=FALSE}
 library(ggplot2)
@@ -34,7 +34,7 @@ load("rda/murders.rda")
 ```{r summary, echo=FALSE}
 summary(murders$rate)
 ```
-This the average death rate of the USA looks a little high if compared to european countries but is fair to judge USA considering such vast territory and diverse regions? 
+This the average death rate of the USA looks a little high if compared to european countries.   However is it fair to judge USA considering such vast territory and diverse regions? 
 
 
 ## deaths across regions
