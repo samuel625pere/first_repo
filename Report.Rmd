@@ -1,0 +1,51 @@
+---
+title: "Report"
+author: "Samuel Pereira"
+date: "26/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+In this report I'll make a few points about the data on morders in US territory, I hope this little project of mine can server as a start for your own data analysis and repors.
+
+Using this libraries:
+1. ggplo2
+2. tidyverse
+
+```{r libraries,message=FALSE,echo=FALSE}
+library(ggplot2)
+library(tidyverse)
+```
+
+And the data wrangled using the handler script
+
+```{r data}
+load("rda/murders.rda")
+```
+
+
+## Overview
+
+```{r summary, echo=FALSE}
+summary(murders$rate)
+```
+This the average death rate of the USA looks a little high if compared to european countries but is fair to judge USA considering such vast territory and diverse regions? 
+
+
+## deaths across regions
+
+Let's see how the murder rates are within the country:
+
+```{r pressure, echo=FALSE}
+murders %>% ggplot(aes(region,rate))+
+  ylab("Deaths per 100,000")+
+  xlab("Us Regions")+
+  geom_boxplot()
+```
+
+
