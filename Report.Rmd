@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 In this report I'll make a few points about the data on morders in US territory, I hope this little project of mine can server as a start for your own data analysis and repors.
 
 Using this libraries:  
-1. ggplo2  
+1. ggplot2  
 2. tidyverse  
 
 ```{r libraries,message=FALSE,echo=FALSE}
